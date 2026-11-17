@@ -291,6 +291,9 @@ Illegal transitions (e.g. completing a task that was never started) are rejected
 
 ### task verify / verification-gated completion
 
+To add a separate, optional local GRF check to task completion without replacing
+task `Verify:` commands, see [the GRF acceptance-gate example](docs/grf-downstream.md).
+
 Each task file has a `Verify:` line — a shell command that proves the task is done
 (exit 0 = pass). `task complete` runs it first and **refuses to complete on failure**.
 
